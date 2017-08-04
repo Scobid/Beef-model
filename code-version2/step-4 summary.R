@@ -12,7 +12,7 @@ calf_sum <- summary(annual(calf_1), annual(calf_2))
 # backgrounding
 bkgd_sum <- summary(annual(bkgd_1), annual(bkgd_2))
 
-# finsihing (fed) 
+# finsihing (fed)
 fnsh_sum <- summary(annual(fnsh_1), annual(fnsh_2))
 
 # culled cattle
@@ -39,11 +39,11 @@ require(xtable)
 calf_sum[, 3] <- paste("(", round(100*calf_sum[, 3], 2), "%)", sep="")
 xtable(calf_sum[c(1, 2, 3, 6, 9), ])
 
-# backgrounding 
+# backgrounding
 bkgd_sum[, 3] <- paste("(", round(100*bkgd_sum[, 3], 2), "%)", sep="")
 xtable(bkgd_sum[c(1, 2, 3, 6, 9, 12, 15), ])
 
-# finishing 
+# finishing
 fnsh_sum[, 3] <- paste("(", round(100*fnsh_sum[, 3], 2), "%)", sep="")
 xtable(fnsh_sum[c(1, 2, 3, 6, 9, 12), ])
 
@@ -51,12 +51,12 @@ xtable(fnsh_sum[c(1, 2, 3, 6, 9, 12), ])
 cull_sum[, 3] <- paste("(", round(100*cull_sum[, 3], 2), "%)", sep="")
 xtable(cull_sum[c(1, 2, 3, 6, 9, 12), ])
 
-# processing 
+# processing
 proc_sum[3:nrow(proc_sum), 1:2] <- round(as.numeric(proc_sum[3:nrow(proc_sum), 1:2])/1e6, 1)
 proc_sum[, 3] <- paste("(", round(100*proc_sum[, 3], 2), "%)", sep="")
 xtable(proc_sum)
 
-## welfare impacts ---- 
+## welfare impacts ----
 
 welf_sum1 <- round(welfare_yr/1e6, 2)
 
@@ -81,23 +81,23 @@ welf_sum2 <- rbind(
 
 # cow-calf
 welf_sum2[3,  ] <- cbind(welf_sum2[1, 1]+welf_sum2[2, 1], welf_sum2[1, 2]+welf_sum2[2, 2], 0)
-welf_sum2[3, 3] <- 100*(welf_sum2[3, 2] - welf_sum2[3, 1])/welf_sum2[3, 1] 
+welf_sum2[3, 3] <- 100*(welf_sum2[3, 2] - welf_sum2[3, 1])/welf_sum2[3, 1]
 
 # backgrounding
 welf_sum2[6,  ] <- cbind(welf_sum2[4, 1]+welf_sum2[5, 1], welf_sum2[4, 2]+welf_sum2[5, 2], 0)
-welf_sum2[6, 3] <- 100*(welf_sum2[6, 2] - welf_sum2[6, 1])/welf_sum2[6, 1] 
+welf_sum2[6, 3] <- 100*(welf_sum2[6, 2] - welf_sum2[6, 1])/welf_sum2[6, 1]
 
 # finishing
 welf_sum2[9,  ] <- cbind(welf_sum2[7, 1]+welf_sum2[8, 1], welf_sum2[7, 2]+welf_sum2[8, 2], 0)
-welf_sum2[9, 3] <- 100*(welf_sum2[9, 2] - welf_sum2[9, 1])/welf_sum2[9, 1] 
+welf_sum2[9, 3] <- 100*(welf_sum2[9, 2] - welf_sum2[9, 1])/welf_sum2[9, 1]
 
 # non-fed
 welf_sum2[12,  ] <- cbind(welf_sum2[10, 1]+welf_sum2[11, 1], welf_sum2[10, 2]+welf_sum2[11, 2], 0)
-welf_sum2[12, 3] <- 100*(welf_sum2[12, 2] - welf_sum2[12, 1])/welf_sum2[12, 1] 
+welf_sum2[12, 3] <- 100*(welf_sum2[12, 2] - welf_sum2[12, 1])/welf_sum2[12, 1]
 
 # processing
 welf_sum2[15,  ] <- cbind(welf_sum2[13, 1]+welf_sum2[14, 1], welf_sum2[13, 2]+welf_sum2[14, 2], 0)
-welf_sum2[15, 3] <- 100*(welf_sum2[15, 2] - welf_sum2[15, 1])/welf_sum2[15, 1] 
+welf_sum2[15, 3] <- 100*(welf_sum2[15, 2] - welf_sum2[15, 1])/welf_sum2[15, 1]
 
 welf_sum2[, 3] <- paste("(", round(welf_sum2[, 3], 2), "%)", sep="")
 
