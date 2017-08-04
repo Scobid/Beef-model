@@ -1,0 +1,4 @@
+load("/Users/kennethpoon/Dropbox/UoG/AKER : Institute/commodity-models/beef/data/clean/price_transmissions.RDS")
+load("/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Work-Alan/Beef/Beef model/Beef model/data/clean/price_transmissions.RDS")
+load("/Users/scott/Library/Mobile Documents/com~apple~CloudDocs/Work-Alan/Beef/Beef model/Beef model/data/clean/quantities.RDS")
+load("/Users/scobid/Library/Mobile Documents/com~apple~CloudDocs/Work-Alan/Beef/Beef model/Beef model/data/clean/weights.RDS")
